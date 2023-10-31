@@ -1,0 +1,10 @@
+{:paths ["src/clj"]
+ :deps {org.clojure/clojure         {:mvn/version "1.10.1"}
+        com.cleancoders.c3kit/apron {:mvn/version "2.0.5"}
+        enlive/enlive               {:mvn/version "1.1.6"}}
+ :aliases {
+           :test {:extra-deps {speclj/speclj {:mvn/version "3.4.3"}}
+                  :extra-paths ["spec/clj"]}
+           :spec {:main-opts ["-m" "speclj.main" "-c"]}
+           :start {:main-opts ["-m" "euclid.main"]}
+           }}
